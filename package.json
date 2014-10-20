@@ -1,0 +1,25 @@
+{
+  "name": "rusty",
+  "version": "0.0.1",
+  "description": "captcha for nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zweifisch/rusty.git"
+  },
+  "keywords": [
+    "captcha"
+  ],
+  "author": "zf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zweifisch/rusty/issues"
+  },
+  "homepage": "https://github.com/zweifisch/rusty",
+  "dependencies": {
+    "canvas": "^1.1.6"
+  }
+}
