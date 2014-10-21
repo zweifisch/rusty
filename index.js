@@ -85,4 +85,14 @@
     };
   };
 
+  exports.verifyCaptcha = function(req, res, next) {
+    req.verifyCaptcha = function(input) {
+      var _captcha;
+      _captcha = req.session.captcha;
+      delete req.session.captcha;
+      return _captcha && _captcha === input;
+    };
+    return next();
+  };
+
 }).call(this);

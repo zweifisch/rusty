@@ -15,9 +15,9 @@ app.use("/captcha.png", rusty.middlware({
     session: 'captcha'
 }));
 
-app.post("/login", function(req, res) {
-    if(req.session.captcha === req.body.captcha) {
-        // valid
+app.post("/login", rusty.verifyCaptcha, function(req, res) {
+    if(req.verifyCaptcha(req.body.captcha)) {
+        // human here
     }
 });
 ```

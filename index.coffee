@@ -58,3 +58,10 @@ exports.middleware = (options)->
         req.session.captcha = code
         canvas.toBuffer (err, buffer)->
             res.end buffer
+
+exports.verifyCaptcha = (req, res, next)->
+    req.verifyCaptcha = (input)->
+        _captcha = req.session.captcha
+        delete req.session.captcha
+        _captcha and _captcha is input
+    next()
