@@ -11,6 +11,8 @@ rusty = require("rusty");
 app.use("/captcha.png", rusty.middlware({
     width: 120,
     height: 50,
+    color: '#888888',
+    background: '#ffffff',
     chars: 'abcdefghijklmnopqrstuvwxyz0123456789',
     length: 4,
     fonts: ['20px sans', '20px bold sans'],
