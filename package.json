@@ -1,10 +1,12 @@
 {
   "name": "rusty",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "captcha for nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/coffee-script/bin/coffee -c index.coffee",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,9 @@
   },
   "homepage": "https://github.com/zweifisch/rusty",
   "dependencies": {
-    "canvas": "^1.1.6"
+    "canvas": "^1.2.7"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.3"
   }
 }

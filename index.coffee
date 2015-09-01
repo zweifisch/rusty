@@ -20,7 +20,7 @@ captcha = ({height, width, length, color, background, chars, fonts, noise})->
     _color = color.substr 1
     background ?= "#ffffff"
     fonts ?= ['20px sans', '20px arial', 'bold 20px arial', 'italic 20px sans']
-    noise = (noise or 90) * 0.01 - 0.5
+    noise = (noise or 70) * 0.01 - 0.5
 
     canvas = new Canvas width, height
     ctx = canvas.getContext '2d'
@@ -45,7 +45,7 @@ captcha = ({height, width, length, color, background, chars, fonts, noise})->
         for y in [0...Math.ceil(height * 0.5)]
             if Math.random() < noise
                 ctx.fillStyle = "##{luminance _color, Math.random()}"
-                ctx.fillRect x * 2, y * 2, 2, 2
+                ctx.fillRect x * 2, y * 2, 1 * (pickRandom [1,2]), 1 * (pickRandom [1,2])
 
     canvas: canvas
     code: code

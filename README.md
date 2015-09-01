@@ -1,11 +1,13 @@
 # rusty
 
+[![NPM Version][npm-image]][npm-url]
+
 captcha for nodejs
 
 ```javascript
 rusty = require("rusty");
 
-// available options
+// available options, all optional
 app.use("/captcha.png", rusty.middlware({
     width: 120,
     height: 50,
@@ -21,3 +23,6 @@ app.post("/login", rusty.verifyCaptcha, function(req, res) {
     }
 });
 ```
+
+[npm-image]: https://img.shields.io/npm/v/rusty.svg?style=flat
+[npm-url]: https://npmjs.org/package/rusty
