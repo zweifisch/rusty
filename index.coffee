@@ -1,4 +1,4 @@
-Canvas = require 'canvas'
+Canvas = require 'canvas-prebuilt'
 
 pickRandom = (items)->
     items[Math.floor(Math.random() * items.length)]
