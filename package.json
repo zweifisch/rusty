@@ -4,9 +4,7 @@
   "description": "captcha for nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "coffee -c index.coffee",
-    "prepublish": "npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -22,9 +20,7 @@
   },
   "homepage": "https://github.com/zweifisch/rusty",
   "dependencies": {
-    "canvas-prebuilt": "^1.6.0"
+    "pureimage": "^0.0.17"
   },
-  "devDependencies": {
-    "coffee-script": "^1.9.3"
-  }
+  "devDependencies": {}
 }
