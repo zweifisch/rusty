@@ -12,7 +12,7 @@ const luminance = (hex, lum) =>
     }).join('')
 
 const captcha = ({ height=50, width=125, length=4,
-    color='#333333', background='#ffffff', chars='0123456789', noise=0.2, fonts}) => {
+    color='#333333', background='#ffffff', chars='0123456789', noise=0.2, fonts} = {}) => {
 
     chars = chars.match(/.{1}/g)
 
@@ -67,6 +67,7 @@ const save = (canvas, stream) =>
 exports.save = save
 
 exports.middleware = options => {
+    options.fonts = options.fonts || [['Slabo', 25, `${__dirname}/Slabo.ttf`]]
     let loaded = registerFonts(options.fonts)
     return (req, res) => {
         loaded.then(() => {

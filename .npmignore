@@ -1,3 +1,2 @@
-*.coffee
 .travis.yml
 *.tgz

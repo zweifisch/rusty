@@ -3,7 +3,7 @@ let fs = require('fs')
 let rusty = require('./index')
 
 let fonts = [
-    ['Source Sans Pro', 25, 'node_modules/pureimage/tests/fonts/SourceSansPro-Regular.ttf']
+    ['Slabo', 25, 'Slabo.ttf']
 ]
 
 rusty.registerFonts(fonts).then(() => {
